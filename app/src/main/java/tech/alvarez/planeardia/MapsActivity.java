@@ -38,32 +38,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         ArrayList<Lugar> lugares = Database.obtenerUbicaciones(this);
 
-        PolylineOptions polylineOptions = new PolylineOptions()
-                .color(ContextCompat.getColor(this, R.color.colorPrimary))
-                .width(8);
+        // TODO: Paso 3
 
-        LatLngBounds.Builder builder = new LatLngBounds.Builder();
-
-        for (int i = 0; i < lugares.size(); i++) {
-            Lugar l = lugares.get(i);
-
-            LatLng punto = new LatLng(l.getLatitud(), l.getLongitud());
-
-            MarkerOptions markerOptions = new MarkerOptions()
-                    .position(punto)
-                    .title(l.getNombre())
-                    .snippet(l.getDireccion());
-
-            mMap.addMarker(markerOptions);
-
-            builder.include(punto);
-
-            polylineOptions.add(punto);
-        }
-        mMap.addPolyline(polylineOptions);
-
-
-        LatLngBounds bounds = builder.build();
-        mMap.animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 10));
+        // TODO: Paso 4
     }
 }

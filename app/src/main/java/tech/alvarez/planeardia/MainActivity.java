@@ -37,11 +37,8 @@ public class MainActivity extends AppCompatActivity {
     public void adicionarLugar(View view) {
         // Cuando se presiona el botón flotante adicionar
 
-        PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
-        try {
-            startActivityForResult(builder.build(this), 888);
-        } catch (Exception e) {
-        }
+        // TODO: PASO 1
+
 
     }
 
@@ -50,16 +47,9 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 888) {
             if (resultCode == RESULT_OK) {
 
-                Place place = PlacePicker.getPlace(this, data);
+                // TODO: PASO 2
 
-                String nombre = place.getName().toString();
-                String direccion = place.getAddress().toString();
-                double latitud = place.getLatLng().latitude;
-                double longitud = place.getLatLng().longitude;
-                String telefono = place.getPhoneNumber() != null ? place.getPhoneNumber().toString() : "No tiene teléfono";
-                String website = place.getWebsiteUri() != null ? place.getWebsiteUri().getAuthority() : "No tiene website";
 
-                Database.guardarUbicacion(this, nombre, direccion, latitud, longitud, telefono, website);
 
                 cargarDatos();
             }
