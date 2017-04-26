@@ -49,9 +49,9 @@ for (int i = 0; i < lugares.size(); i++) {
     LatLng punto = new LatLng(l.getLatitud(), l.getLongitud());
 
     MarkerOptions markerOptions = new MarkerOptions()
-    .position(punto)
-    .title(l.getNombre())
-    .snippet(l.getDireccion());
+        .position(punto)
+        .title(l.getNombre())
+        .snippet(l.getDireccion());
 
     mMap.addMarker(markerOptions);
 
