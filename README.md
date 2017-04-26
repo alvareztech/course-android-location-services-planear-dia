@@ -66,14 +66,19 @@ mMap.addPolyline(polylineOptions);
 
 Hacer que la cámara centree los todos puntos en la pantalla.
 
+Antes del `for`
 
 ```java
 LatLngBounds.Builder builder = new LatLngBounds.Builder();
 ```
 
+Dentro del `for`
+
 ```java
 builder.include(punto);
 ```
+
+Al final y afuera del `for`
 
 ```java
 LatLngBounds bounds = builder.build();
