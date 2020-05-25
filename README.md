@@ -1,6 +1,10 @@
-# CourseALS20171 - Planear Día
+# Planear Día
 
-Aplicación de Google Places y Google Maps
+Aplicación de ejemplo de uso de Google Places y Google Maps.
+
+> Este proyecto es parte del [Curso de servicios de localización en Android](https://alvarez.tech/courses/android-localizacion/)
+
+> Place Picker esta deprecado, se necesita actualizar este proyecto a `'com.google.android.libraries.places:places:2.2.0'` para que funcione correctamente.
 
 ## Paso 1
 

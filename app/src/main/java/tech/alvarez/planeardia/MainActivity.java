@@ -6,6 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
 
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlacePicker;
+
 import java.util.ArrayList;
 
 import tech.alvarez.planeardia.model.Lugar;
@@ -41,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 888) {
             if (resultCode == RESULT_OK) {
 
                 // TODO: PASO 2
-
 
 
                 cargarDatos();
